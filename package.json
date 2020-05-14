@@ -1,18 +1,18 @@
 {
-    "name": "vue-cli-plugin-dll",
-    "version": "1.1.11",
-    "description": "vue-cli 3 plugin for Dll and DllReference",
+    "name": "vue-cli-plugin-webpack-dll",
+    "version": "1.1.12",
+    "description": "vue-cli3 plugin for Dll and DllReference",
     "main": "service.js",
-    "repository": "git+https://github.com/fingerpan/vue-cli-plugin-dll.git",
-    "homepage": "https://github.com/fingerpan/vue-cli-plugin-dll",
+    "repository": "git+https://github.com/wangzl1163/vue-cli-plugin-webpack-dll.git",
+    "homepage": "https://github.com/wangzl1163/vue-cli-plugin-webpack-dll",
     "keywords": [
         "vue",
         "vue-cli",
         "plugin",
-        "Dll",
+        "DllPlugin",
         "DllReference"
     ],
-    "author": "youngpan",
+    "author": "wangzl1163",
     "license": "MIT",
     "engines": {
         "node": ">=8.0"
