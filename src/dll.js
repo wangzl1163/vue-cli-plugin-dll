@@ -37,6 +37,8 @@ module.exports = class Dll {
             filename: '[name].[hash:8].dll.js',
             // common library name
             library: '[name]_library',
+            // Configure how the library will be exposed
+            libraryTarget: 'var',
             // the name of directory specified after output
             outputDir: 'dll'
         }
@@ -49,6 +51,7 @@ module.exports = class Dll {
         this.isCommand = false
         this.isOpen = false
         this.inject = this.dllConfig.inject
+        this.libraryTarget = this.dllConfig.libraryTarget
 
         // TODO: release more option
         merge(this, Dll.getDefaultConfig())
@@ -135,7 +138,8 @@ module.exports = class Dll {
         return {
             path: this.outputPath,
             filename: this.filename,
-            library: this.library
+            library: this.library,
+            libraryTarget: this.libraryTarget
         }
     }
 
