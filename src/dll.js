@@ -2,7 +2,7 @@ const path = require('path')
 const {
     isObject,
     merge,
-    normalizeRntry,
+    normalizeEntry,
     tryGetManifestJson,
     replaceAsyncName,
     getAssetHtmlPluginDefaultArg,
@@ -66,7 +66,7 @@ module.exports = class Dll {
     // init options ------
     // init entey
     initEntry() {
-        this.entry = normalizeRntry(this.dllConfig.entry)
+        this.entry = normalizeEntry(this.dllConfig.entry)
     }
     initOutputPath() {
         let output = this.dllConfig.output
@@ -90,7 +90,7 @@ module.exports = class Dll {
     }
     initOpen() {
         let open = this.dllConfig.open
-        this.isOpen = open == true ? this.validateEntry() : open
+        this.isOpen = open === true ? this.validateEntry() : open
     }
     initCatchPath() {
         let cacheFilePath = this.dllConfig.cacheFilePath

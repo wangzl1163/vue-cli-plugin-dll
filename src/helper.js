@@ -90,7 +90,7 @@ exports.getEntryByWConfig = entry => {
         }, {})
 }
 
-exports.normalizeRntry = (entry = {}) => {
+exports.normalizeEntry = (entry = {}) => {
     if (!isObject(entry) && entry) {
         entry = {
             dll: entry
