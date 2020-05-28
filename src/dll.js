@@ -13,7 +13,7 @@ module.exports = class Dll {
             manifest: '[name].manifest.json',
             filename: '[name].[hash:8].dll.js',
             library: '[name]_library',
-            outputDir: 'dll',
+            outputDir: 'dll'
         }
     }
 
@@ -91,11 +91,10 @@ module.exports = class Dll {
         }]
     }
 
-
     resolveDllReferenceArgs() {
         return Object.keys(this.resolveEntry())
             .map((entryName) => {
-                let jsonPath = this.resolvePath('./', this.manifest.replace('[name]', entryName));
+                let jsonPath = this.resolvePath('./', this.manifest.replace('[name]', entryName))
                 let manifest = tryGetManifestJson(jsonPath)
                 if (!manifest) return false
                 return {
